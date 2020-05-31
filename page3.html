@@ -15,6 +15,29 @@
         </ul>
     </nav>
     <h1>Page3</h1>
+        <h2>HADOOP FOR BIG DATA APPLICATIONS</h2>
+        <p>Big Data are collections of information that would have been considered gigantic, impossible to store and process, a decade ago.</p>
+        <p>decade ago.The processing of such large quantities of data imposes particular methods. A classic database management system is unable to process as much information. Hadoop is an open source software product (or, more accurately, „software library framework‟) that is collaboratively produced and freely distributed by the Apache Foundation – effectively, it is a developer‟s toolkit designed to simplify the building of Big Data solutions.</p>
+        <p>Hadoop is used by companies with very large volumes of data to process. Among them are web giants such as Facebook, Twitter, LinkedIn, eBay and Amazon. Hadoop is a distributed data processing and management system. It contains many components, including: HDFS, YARN,Map Reduce.</p>
+        <p>HDFS is a distributed file system that provides high-performance access to data across Hadoop clusters.</p>
+        <p>MapReduce is a core component of the Apache Hadoop software framework. Hadoop enables resilient, distributed processing of massive unstructured data sets across commodity computer clusters, in which each node of the cluster includes its own storage. MapReduce serves two essential functions: It parcels out work to various nodes within the cluster or map, and it organizes and reduces the results from each node into a cohesive answer to a query.</p>
+        <h3>Hadoop relies on two servers:</h3>
+        <h4>JobTracker:</h4>
+        <p>there is only one JobTracker per Hadoop cluster. It receives Map/Reduce tasks to run and organizes their execution on the cluster.When you submit your code to be executed on the Hadoop cluster, it is the JobTracker.s responsibility to build an execution plan. This execution plan includes determining the nodes that contain data to operate on, arranging nodes to correspond with data, monitoring running tasks, and relaunching tasks if they fail.</p>
+        <h4>TaskTracker:</h4>
+        <p>several per cluster. Executes the Map/Reduce work itself (as a Map and Reduce task with the associated input data). The JobTracker server is in communication with HDFS; it knows where the Map/Reduce program input data is and where the output data must be stored. It can thus optimize the distribution of tasks according to the associated data.</p>
+        <h3>To run a Map/Reduce program, we must:</h3>
+        <p>•Write input data in HDFS
+           •Submit the program to the cluster's JobTracker.
+           •Retrieve output data from HDFS.</p>
+        <p>All TaskTrackers report their status continuously through heartbeat packages. If a TaskTracker fails (missing heartbeat or failed task), the JobTracker notifies the redistribution of the task to another node.</p>
+        <h3>HDFS relies on two servers:</h3>
+        <h4>NameNode:</h4>
+        <p>unique on the cluster. It stores information about file names and their characteristics. It is the master of the HDFS that controls slave DataNode.</p>
+        <h4>Secondary NameNode:</h4>
+        <p>The Secondary NameNode monitors the state of the HDFS cluster and takes “snapshots” of the data contained in the NameNode. If the NameNode fails, then the Secondary NameNode can be used in place of the NameNode.</p>
+        <h4>DataNode:</h4>
+        <p>multiple by cluster. Stores the contents of the files themselves, fragmented into blocks (64KB by default)</p>
     </header>
 </body>
 </html>
