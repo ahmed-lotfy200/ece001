@@ -26,9 +26,11 @@
         <h4>TaskTracker:</h4>
         <p>several per cluster. Executes the Map/Reduce work itself (as a Map and Reduce task with the associated input data). The JobTracker server is in communication with HDFS; it knows where the Map/Reduce program input data is and where the output data must be stored. It can thus optimize the distribution of tasks according to the associated data.</p>
         <h3>To run a Map/Reduce program, we must:</h3>
-        <p>•Write input data in HDFS
-           •Submit the program to the cluster's JobTracker.
-           •Retrieve output data from HDFS.</p>
+        <ul>
+            <li>Write input data in HDFS</li>
+            <li>Submit the program to the cluster's JobTracker.</li>
+            <li>Retrieve output data from HDFS.</li>
+        </ul>  
         <p>All TaskTrackers report their status continuously through heartbeat packages. If a TaskTracker fails (missing heartbeat or failed task), the JobTracker notifies the redistribution of the task to another node.</p>
         <h3>HDFS relies on two servers:</h3>
         <h4>NameNode:</h4>
